@@ -1,6 +1,6 @@
 <h1>Edit a New Figure</h1>
 <form method="post" action="/figures/<%= @figure.id %>">
-  
+  <input type="hidden">
   <p>Name: <input type="text" name="figure[name]" id="figure_name" value="<%= @figure.name %>"></p>
   <% Landmark.all.each do |landmark| %>
     <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%= landmark.id %>" value="<%= landmark.id %>" <%= "checked" if @figure.landmarks.include?(landmark) %>><%= landmark.name %></input>
