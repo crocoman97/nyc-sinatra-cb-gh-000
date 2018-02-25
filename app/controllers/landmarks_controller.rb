@@ -10,7 +10,7 @@ class LandmarksController < ApplicationController
   
   post '/landmarks' do 
     @landmark = Landmark.update(params[:landmark])
-    @figure.landmarks << Landmark.create(params[:landmark][:name]) unless params[:figure_name_2].empty?
+    @landmark.figure = Figure.create(params[:figure_name_2]) unless params[:figure_name_2].empty?
     @landmark.titles << Title.create(params[:title][:name]) unless params[:title][:name].empty?
     @figure.save
     erb :'/landmarks/show'
