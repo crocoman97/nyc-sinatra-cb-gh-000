@@ -1,7 +1,7 @@
 <h1>Create a New Figure</h1>
 <form method="post" action="/figures">
   
-  <p>Name: <input type="text" name="figure[name]"></p>
+  <p>Name: <input type="text" name="figure[name]" id="figure_name"></p>
   <% Landmark.all.each do |landmark| %>
     <input type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>">
   <% end %>
