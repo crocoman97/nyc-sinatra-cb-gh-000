@@ -22,5 +22,6 @@ class FiguresController < ApplicationController
     erb :show 
   end
   
+  
 
 end
