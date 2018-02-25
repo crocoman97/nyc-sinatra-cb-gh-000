@@ -1,4 +1,7 @@
 
 <form method="post" action="/figures">
-  <input name="">
+  <p>Name: <input type="text" name="figure[name]"></p>
+  <% Landmark.all.each do |landmark| %>
+    <input type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>">
+  <% end %>
 </form>
