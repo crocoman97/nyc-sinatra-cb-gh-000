@@ -4,8 +4,8 @@
   
   <p>Name: <input type="text" name="landmark[name]" id="landmark_name"></p>
   <p>Year_Completed: <input type="text" name="landmark[year_completed]" id="landmark_year_completed"></p>
-  <% Landmark.all.each do |landmark| %>
-    <input type="radio" name="landmark[landmark_ids][]" id="landmark_<%= landmark.id %>" value="<%= landmark.id %>"><%= landmark.name %></input>
+  <% Figure.all.each do |figure| %>
+    <input type="radio" name="figure[name]" id="figure_name" value="<%= figure.id %>"><%= figure.name %></input>
   <% end %>
   
   <br></br>
