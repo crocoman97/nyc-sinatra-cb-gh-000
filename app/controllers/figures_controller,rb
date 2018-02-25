@@ -14,8 +14,8 @@ class FiguresController < ApplicationController
     
   end
   
-  get '/figures/:slug' do 
-    
+  get '/figures/:id' do 
+    erb :show 
   end
   
 
