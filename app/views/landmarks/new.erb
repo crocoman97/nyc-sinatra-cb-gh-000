@@ -4,16 +4,18 @@
   
   <p>Name: <input type="text" name="landmark[name]" id="landmark_name"></p>
   <p>Year_Completed: <input type="text" name="landmark[year_completed]" id="landmark_year_completed"></p>
+  
+  <p>Choose From the figures</p>
   <% Figure.all.each do |figure| %>
     <input type="radio" name="figure[name]" id="figure_name" value="<%= figure.id %>"><%= figure.name %></input>
   <% end %>
   
   <br></br>
   
-  <p>Or Create a new landmark</p>
-  <p>landmark: <input type="text" name="landmark[name]" id="new_landmark"></p>
+  <p>Or Create a new figure</p>
+  <p>landmark: <input type="text" name="figure[name]" id="new_landmark"></p>
   <br></br>
-  
+  <p>Chosse from the titles</p>
   <% Title.all.each do |title| %>
     <input type="checkbox" name="landmark[title_ids][]" id="title_<%= title.id %>" value="<%= title.id %>"><%= title.name %></input>
   <% end %>
