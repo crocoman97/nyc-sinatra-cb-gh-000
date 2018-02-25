@@ -3,7 +3,7 @@
 <form method="post" action="/landmarks">
   
   <p>Name: <input type="text" name="landmark[name]" id="figure_name"></p>
-  <p>Year_Completed: <input type="text" name="landmark[name]" id="figure_name"></p>
+  <p>Year_Completed: <input type="text" name="landmark[year_completed]" id="figure_name"></p>
   <% Landmark.all.each do |landmark| %>
     <input type="checkbox" name="landmark[landmark_ids][]" id="landmark_<%= landmark.id %>" value="<%= landmark.id %>"><%= landmark.name %></input>
   <% end %>
