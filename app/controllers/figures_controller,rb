@@ -12,7 +12,8 @@ class FiguresController < ApplicationController
   post '/figures' do 
     @figure = Figure.create(params[:figure])
     @figure.landmarks << Landmark.create(params[:landmark][:name]) unless params[:landmark][:name] == ""
-    
+    @figure.titles << Title.create(params[:title][:name]) unless params[:title][:name] == ""
+
     erb :show
   end
   
