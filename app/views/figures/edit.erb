@@ -1,5 +1,5 @@
 <h1>Edit a New Figure</h1>
-<form method="post" action="/figures">
+<form method="post" action="/figures/<%= @figure.id %>">
   
   <p>Name: <input type="text" name="figure[name]" id="figure_name"></p>
   <% Landmark.all.each do |landmark| %>
