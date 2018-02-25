@@ -10,8 +10,9 @@ class FiguresController < ApplicationController
   end 
   
   post '/figures' do 
-    
-    
+    @figure = Figure.create(params[:figure])
+    @figure.landmarks << Landmark.create(params[:landmark][:name]) unless params[:landmark][:name] == ""
+    erb :show
   end
   
   get '/figures/:id' do 
