@@ -14,7 +14,7 @@
   <br></br>
   
   <% Title.all.each do |title| %>
-    <input type="checkbox" name="figure[title_ids][]" id="title_<%= title.id %>" value="<%= title.id %>" ><%= title.name %></input>
+    <input type="checkbox" name="figure[title_ids][]" id="title_<%= title.id %>" value="<%= title.id %>" <%= "checked" if @figure.titles.include?(landmark) %>><%= title.name %></input>
   <% end %>
   
   <br></br>
