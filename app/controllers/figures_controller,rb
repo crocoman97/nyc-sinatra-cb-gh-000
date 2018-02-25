@@ -14,5 +14,9 @@ class FiguresController < ApplicationController
     
   end
   
+  get '/figures/:slug' do 
+    
+  end
+  
 
 end
