@@ -22,6 +22,12 @@ class FiguresController < ApplicationController
     erb :show 
   end
   
+  get '/figures/:id/edit' do 
   
+  end
+  
+  patch '/figures/:id' do 
+    
+  end
 
 end
