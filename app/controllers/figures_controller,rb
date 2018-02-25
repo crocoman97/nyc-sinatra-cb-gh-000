@@ -5,6 +5,14 @@ class FiguresController < ApplicationController
     erb :index
   end
   
+  get '/figures/new' do 
+    
+  end 
+  
+  post '/figures' do 
+    
+    
+  end
   
 
 end
